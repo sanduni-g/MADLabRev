@@ -33,10 +33,10 @@ public class ReadingCollectionsActivity extends AppCompatActivity {
         super.onResume();
 
         Context context = getApplicationContext();
-        CharSequence text = "Welcome" + nameSent + "\n" + "Pleas Enter What You Need";
+        CharSequence text = "Welcome " + nameSent + "\n" + "Pleas Enter What You Need";
         Integer duration = Toast.LENGTH_SHORT;
 
-        Toast.makeText(context, text, duration);
+        toast = Toast.makeText(context, text, duration);
         toast.setGravity(Gravity.BOTTOM, Gravity.CENTER,0);
         toast.show();
 
@@ -44,7 +44,8 @@ public class ReadingCollectionsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent1 = new Intent(ReadingCollectionsActivity.this, AddReading.class);
-                intent1.putExtra("toAddReaidng", 1);
+                int temp1 = 1;
+                intent1.putExtra("toAddReaidng", temp1);
                 startActivity(intent1);
             }
         });
@@ -52,7 +53,8 @@ public class ReadingCollectionsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent2 = new Intent(ReadingCollectionsActivity.this, AddReading.class);
-                intent2.putExtra("toAddReaidng", 2);
+                int temp2 = 2;
+                intent2.putExtra("toAddReaidng", temp2);
                 startActivity(intent2);
             }
         });

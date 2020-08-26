@@ -34,7 +34,7 @@ public class AddReading extends AppCompatActivity {
         buttonView = findViewById(R.id.buttonView);
 
         intent= getIntent();
-        flag = intent.getIntExtra("ToAddReading", -1);
+        flag = intent.getIntExtra("toAddReaidng", -1);
 
         changeFragmnet();
 
@@ -63,11 +63,11 @@ public class AddReading extends AppCompatActivity {
             ft.replace(R.id.fragment, fragment1);
             ft.commit();
         }
-        else{
+        else if (flag == 2){
             lblTitle.setText("Title of the Article: ");
             lblAuthor.setText("Editor: ");
             Fragment fragment2 ;
-            fragment2 = new bookFragment();
+            fragment2 = new paperFragment();
             FragmentManager fm = getSupportFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
             ft.replace(R.id.fragment, fragment2);

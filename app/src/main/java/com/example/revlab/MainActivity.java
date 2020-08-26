@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, ReadingCollectionsActivity.class);
-                i.putExtra("valueToPass",1);
+                i.putExtra("valueToPass",name);
 
                 startActivity(i);
             }
